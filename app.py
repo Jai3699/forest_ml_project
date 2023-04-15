@@ -18,8 +18,8 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict_datapoint():
     if request.method=='POST':
-        Temperature=float(request.form.get('Temperature'))
-        RH=float(request.form.get('RH'))
+        Temperature=float(request.form['Temperature'])
+        RH=float(request.form['RH'])
         Ws=float(request.form.get('Ws'))
         Rain=float(request.form.get('Rain'))
         FFMC=float(request.form.get('FFMC'))
